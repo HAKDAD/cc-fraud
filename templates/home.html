@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Wizardry: Unveiling Fraud Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url('your-animated-background.gif') repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      animation: iceFall 10s linear infinite;
+    }
+
+    @keyframes iceFall {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .ml-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .team-details {
+      margin-top: 20px;
+      text-align: left;
+      border: 2px solid #3498db;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #fff;
+    }
+
+    .team-info {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    .btn-info {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-info:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Welcome to the Realm of Credit Card Wizardry</h1>
+      <p>Where Fraud Detection Meets Magic</p>
+    </div>
+  </header>
+
+  <div class="ml-container">
+    <p>Behold, the moment of truth has arrived! Cast your 30 feature values into the cauldron of prediction:</p>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+      <div class="justify">
+        <textarea name="message" rows="8" cols="50" placeholder="Enter your magical numbers..."></textarea>
+      </div>
+      <br/>
+
+      <input type="submit" class="btn-info" value="Unveil the Prediction" />
+    </form>
+
+    <div class="team-details">
+      <h2>Project Details:</h2>
+      <p class="team-info">Domain: Machine Learning </p>
+      <p class="team-info">Batch Number: Batch C9</p>
+      <p class="team-info">Project Guide: Assistant Professor Naga Raju</p>
+    </div>
+  </div>
+</body>
+</html>
